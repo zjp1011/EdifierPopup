@@ -25,17 +25,59 @@
             android:lineSpacingExtra="6dp"
             android:textSize="15sp" />
 
-        <Button android:id="@+id/btnPerm" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginTop="16dp"
-            android:text="1. 授权蓝牙 / 通知" />
-        <Button android:id="@+id/btnOverlay" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:text="2. 授权悬浮窗" />
-        <Button android:id="@+id/btnAppInfo" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:text="3. 打开应用详情（放行后台弹出等）" />
-        <Button android:id="@+id/btnStart" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginTop="12dp"
-            android:text="4. 开始监听耳机连接" />
-        <Button android:id="@+id/btnTest" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:text="测试弹窗效果" />
+        <Button
+            android:id="@+id/btnPerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1. 授权蓝牙" />
+
+        <Button
+            android:id="@+id/btnOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. 授权悬浮窗" />
+
+        <Button
+            android:id="@+id/btnAppInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. 打开应用详情（放行后台弹出、自启动）" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="弹窗样式（点一下立即预览）"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/styleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="再看一次当前样式" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="设备名关键词（逗号分隔，留空 = 所有蓝牙设备都弹）"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/keywords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="EDIFIER,漫步者"
+            android:inputType="text"
+            android:singleLine="true" />
     </LinearLayout>
 </ScrollView>

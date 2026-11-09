@@ -3,10 +3,6 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -22,17 +18,12 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".PopupService"
-            android:exported="false"
-            android:foregroundServiceType="connectedDevice" />
-
-        <!-- 开机后自动拉起监听服务 -->
+        <!-- 蓝牙设备连接广播：静态注册，App 没在运行时系统也会唤醒它 -->
         <receiver
-            android:name=".BootReceiver"
+            android:name=".BtReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
             </intent-filter>
         </receiver>
     </application>
