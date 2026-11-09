@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="78dp"
+    android:viewportWidth="44"
+    android:viewportHeight="78">
+    <!-- 耳机主体 -->
+    <path
+        android:fillColor="#F4F5F7"
+        android:pathData="M22,4 A18,20 0 1,0 22,44 A18,20 0 1,0 22,4 Z" />
+    <!-- 柄 -->
+    <path
+        android:fillColor="#E3E5EA"
+        android:pathData="M22,38 L22,38 A5,5 0 0,1 27,43 L27,71 A5,5 0 0,1 17,71 L17,43 A5,5 0 0,1 22,38 Z" />
+    <!-- 中心圆 -->
+    <path
+        android:fillColor="#C9CCD4"
+        android:pathData="M22,18 A6,6 0 1,0 22,30 A6,6 0 1,0 22,18 Z" />
+</vector>

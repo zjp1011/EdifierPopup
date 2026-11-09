@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="漫步者连接弹窗"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="6dp"
+            android:textSize="15sp" />
+
+        <Button android:id="@+id/btnPerm" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="1. 授权蓝牙 / 通知" />
+        <Button android:id="@+id/btnOverlay" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="2. 授权悬浮窗" />
+        <Button android:id="@+id/btnAppInfo" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="3. 打开应用详情（放行后台弹出等）" />
+        <Button android:id="@+id/btnStart" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:text="4. 开始监听耳机连接" />
+        <Button android:id="@+id/btnTest" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="测试弹窗效果" />
+    </LinearLayout>
+</ScrollView>
