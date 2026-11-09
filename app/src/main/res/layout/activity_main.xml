@@ -79,5 +79,21 @@
             android:hint="EDIFIER,漫步者"
             android:inputType="text"
             android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="诊断日志（最近的蓝牙连接事件，新的在上）"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/diag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="4dp"
+            android:textIsSelectable="true"
+            android:textSize="13sp" />
     </LinearLayout>
 </ScrollView>

@@ -70,9 +70,10 @@ object PopupController {
 
     // ---------- 弹窗 ----------
 
-    fun show(context: Context, name: String, battery: Int, style: Int = -1) {
+    /** 返回 true 表示弹窗已成功添加到屏幕 */
+    fun show(context: Context, name: String, battery: Int, style: Int = -1): Boolean {
         val ctx = context.applicationContext
-        if (!Settings.canDrawOverlays(ctx)) return
+        if (!Settings.canDrawOverlays(ctx)) return false
         val s = if (style >= 0) style else getStyle(ctx)
 
         dismiss(immediately = true)
@@ -86,6 +87,7 @@ object PopupController {
             else -> null
         }
         if (fx == null) showClassic(ctx, wm, name, battery) else showFx(ctx, wm, fx)
+        return currentView != null
     }
 
     private fun showFx(ctx: Context, wm: WindowManager, fx: FxView) {

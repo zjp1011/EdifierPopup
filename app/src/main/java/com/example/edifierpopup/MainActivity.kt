@@ -64,6 +64,7 @@ class MainActivity : Activity() {
     override fun onResume() {
         super.onResume()
         refreshStatus()
+        findViewById<TextView>(R.id.diag).text = DiagLog.read(this)
     }
 
     override fun onPause() {
